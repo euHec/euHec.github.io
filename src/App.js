@@ -8,7 +8,7 @@ import Portifolio from './pages/Portifolio';
 function App() {
   return (
     <Switch>
-      <Route exact element={ <Home /> } path="/" />
+      <Route exact element={ <Home /> } path="/meu-portifolio" />
       <Route exact element={ <Bio /> } path="/bio" />
       <Route exact element={ <Contato /> } path="/contato" />
       <Route exact element={ <Portifolio /> } path="/portifolio" />
