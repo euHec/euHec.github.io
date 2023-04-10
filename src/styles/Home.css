@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Space+Grotesk:wght@300&display=swap');
+
+@media screen and (min-width: 960px) {
+  main {
+    margin-top: 100px;
+  }
+
+  .content-home {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    border: solid 1px black;
+    border-radius: 20px;
+    margin: 20px;
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+  }
+  
+  .data {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-between;
+  }
+  
+  .data-person h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 60px;
+    margin-bottom: 2px;
+  }
+
+  .data-person h1:hover {
+    color:  rgba(149, 143, 143, 0.92);
+  }
+  
+  .data-person h2 {
+    margin-top: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+  }
+
+  .data-person h2:hover {
+    color:  rgba(149, 143, 143, 0.92);
+  }
+
+  .photo {
+    text-align: center;
+    width: 40%;
+  }
+  
+  .photo img {
+    height: auto;
+    width: 70%;
+    border-radius: 50px;
+  }
+    
+  .social h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+  }
+
+  .social a {
+    color: inherit;
+  }
+
+  .social > a:hover {
+    color: rgba(149, 143, 143, 0.92);
+  }
+}
+
+/* Smaller than standard 960 (devices and browsers)*/
+/* @media only screen and (max-width: 959px) {
+  p{
+      font-size: 10px;
+  }
+} */
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* @media only screen and (min-width: 768px) and (max-width: 959px) {
+  p{
+      font-size: 12px;
+  }
+} */
+
+/* All Mobile Sizes (devices and browser) */
+/* @media only screen and (max-width: 767px) {
+  p{
+      font-size: 14px;
+  }
+} */
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* @media only screen and (min-width: 480px) and (max-width: 767px) {
+  p{
+      font-size: 9px;
+  }
+} */
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+ @media only screen and (max-width: 479px) {
+
+  .content-home {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .data {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .data-person h1 {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    margin-bottom: 2px;
+  }
+  
+  .data-person h2 {
+    text-align: center;
+    margin-top: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+  }
+  
+  .photo img {
+    height: auto;
+    width: 50%;
+    border-radius: 50px;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .social a {
+    color: inherit;
+  }
+
+  .social h3 {
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    order: 2;
+  }
+}

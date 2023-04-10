@@ -1,0 +1,152 @@
+@media only screen and (min-width: 960px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  } 
+
+  .open-nav {
+    display: none;
+  }
+  
+  .close-nav {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  nav a {
+    text-decoration: none;
+  }
+
+  nav > div > :nth-child(1) {
+    border-right: solid 1px black;
+  }
+
+  nav > div > :nth-child(2) {
+    border-right: solid 1px black;
+  }
+
+  nav > :nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+  }
+
+  nav > :nth-child(1) a {
+    color: inherit;
+    width: 33%;
+    text-align: center;
+  }
+
+  nav > :nth-child(1) a:hover {
+    color: rgba(149, 143, 143, 0.92);
+  }
+
+  nav > :nth-child(2) {
+    text-align: center;
+    width: 35%;
+  }
+
+  nav > :nth-child(2) a {
+    padding: 8px 25px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+  }
+
+  nav > :nth-child(2) a:hover {
+    background-color: rgba(149, 143, 143, 0.92);
+    color: black;
+    border: rgba(149, 143, 143, 0.92);
+  }
+}
+
+
+@media only screen and (max-width: 479px) {
+  header {
+    height: 10vh;
+    width: 100%;
+  }
+
+  .sidebar {
+    /* display: none; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    background-color: #e7dfd8a7;
+    text-align: center;
+    text-decoration: none;
+    transform: translateX(-100%);
+    transition: 1s;
+  }
+
+  .closebar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    background-color: #e7dfd8a7;
+    text-align: center;
+    text-decoration: none;
+    transform: translateX(0%);
+    transition: 1s;
+  }
+
+  nav div > a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: solid 1px black;
+    padding: 20px 0px;
+  }
+
+  nav > :nth-child(1) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .open-nav {
+    margin-top: 20px;
+    margin-left: 20px;
+    animation: openNav;
+    animation-duration: 1s;
+  }
+
+  @keyframes openNav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .close-nav {
+    margin-top: 20px;
+    margin-left: 20px;
+    animation: closeNav;
+    animation-duration: 1s;
+  }
+
+  @keyframes closeNav {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
