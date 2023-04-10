@@ -7,22 +7,10 @@ import Header from '../components/Header';
 
 
 export default class Home extends Component {
-  state = {
-    clicked: false,
-  }
-
-  handleClick = () => {
-    const { clicked } = this.state;
-    this.setState({
-      clicked: !clicked,
-    })
-  }
-
   render() {
-    const { clicked } = this.state;
     return (
       <>
-        <Header clicked={ clicked } handleClick={ this.handleClick} />
+        <Header />
         <main className="content-home">
           <div className="data">
             <div className="data-person">

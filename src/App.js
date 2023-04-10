@@ -9,9 +9,9 @@ function App() {
   return (
     <Switch>
       <Route exact element={ <Home /> } path="/meu-portifolio" />
-      <Route exact element={ <Bio /> } path="/meu-portifolio/bio" />
-      <Route exact element={ <Contato /> } path="/meu-portifolio/contato" />
-      <Route exact element={ <Portifolio /> } path="meu-portifolio/portifolio" />
+      <Route exact element={ <Bio /> } path="/bio" />
+      <Route exact element={ <Contato /> } path="/contato" />
+      <Route exact element={ <Portifolio /> } path="/portifolio" />
   </Switch>
   );
 }

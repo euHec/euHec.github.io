@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Header from '../components/Header';
+import FormContact from '../components/FormContact';
 
 export default class Contato extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class Contato extends Component {
       <>
         <Header />
         <h1>Contato</h1>
+        <FormContact />
       </>
     );
   }
