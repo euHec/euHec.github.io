@@ -67,6 +67,74 @@
   }
 }
 
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+  header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  } 
+
+  .open-nav {
+    display: none;
+  }
+  
+  .close-nav {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  nav a {
+    text-decoration: none;
+  }
+
+  nav > div > :nth-child(1) {
+    border-right: solid 1px black;
+  }
+
+  nav > div > :nth-child(2) {
+    border-right: solid 1px black;
+  }
+
+  nav > :nth-child(1) {
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+  }
+
+  nav > :nth-child(1) a {
+    color: inherit;
+    width: 33%;
+    text-align: center;
+  }
+
+  nav > :nth-child(1) a:hover {
+    color: rgba(149, 143, 143, 0.92);
+  }
+
+  nav > :nth-child(2) {
+    text-align: center;
+    width: 35%;
+  }
+
+  nav > :nth-child(2) a {
+    padding: 8px 25px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+  }
+
+  nav > :nth-child(2) a:hover {
+    background-color: rgba(149, 143, 143, 0.92);
+    color: black;
+    border: rgba(149, 143, 143, 0.92);
+  }
+} 
 
 @media only screen and (max-width: 479px) {
   header {
