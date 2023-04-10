@@ -7,7 +7,6 @@ export default class Contato extends Component {
     return (
       <>
         <Header />
-        <h1>Contato</h1>
         <FormContact />
       </>
     );

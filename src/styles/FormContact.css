@@ -1,0 +1,203 @@
+@media screen and (min-width: 960px) { 
+  .area-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .title-form {
+    font-family: 'Righteous', cursive;
+    text-align: end;
+  }
+  
+  .area-form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  
+  .area-form > div > img {
+    width: 90%;
+    height: auto;
+  }
+  
+  .area-form > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+  }
+  
+  form > input {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  form > label {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  form > button {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+  }
+  
+  form > button:hover {
+    background-color: grey;
+    color: white;
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 959px) { 
+  .area-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+  }
+  
+  .title-form {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+  }
+  
+  .area-form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+  
+  .area-form > div > img {
+    width: 90%;
+    height: auto;
+  }
+  
+  .area-form > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+  }
+  
+  form > input {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  form > label {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  form > button {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+  }
+  
+  form > button:hover {
+    background-color: grey;
+    color: white;
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 479px) { 
+  .area-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+  }
+  
+  .title-form {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  .area-form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40%;
+  }
+  
+  .area-form > div > img {
+    width: 60%;
+    height: auto;
+    /* display: none; */
+  }
+  
+  .area-form > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+  }
+  
+  form > input {
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  form > label {
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+  
+  form > button {
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+  }
+}
