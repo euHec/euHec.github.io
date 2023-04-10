@@ -1,11 +1,11 @@
 import { Component } from 'react';
-import NavItens from '../components/NavItens';
+import Header from '../components/Header';
 
 export default class Contato extends Component {
   render() {
     return (
       <>
-        <NavItens />
+        <Header />
         <h1>Contato</h1>
       </>
     );

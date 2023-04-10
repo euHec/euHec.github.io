@@ -1,13 +1,11 @@
 import { Component } from 'react';
-import NavItens from '../components/NavItens';
+import Header from '../components/Header';
 
 export default class Portifolio extends Component {
   render() {
     return (
       <>
-        <header>
-          <NavItens />
-        </header>
+        <Header />
         <main>
           <h1>Portifolio</h1>
 

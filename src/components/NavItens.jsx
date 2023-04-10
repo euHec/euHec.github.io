@@ -1,25 +1,27 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/NavItens.css';
+import { controlSidebar } from '../redux/actions';
+import { connect } from 'react-redux';
 
-export default class NavItens extends Component {
+class NavItens extends Component {
   render() {
-    const { state } = this.props;
+    const { clicked, dispatch } = this.props;
     return (
-      <nav className={ state ? "closebar" : "sidebar"}>
+      <nav className={ clicked ? "closebar" : "sidebar"}>
         <div>
-          <Link to="/">
+          <Link to="/meu-portifolio" onClick={ () => dispatch(controlSidebar())} >
             Home
           </Link>
-          <Link to="/bio">
+          <Link to="/bio" onClick={ () => dispatch(controlSidebar())} >
             Bio
           </Link>
-          <Link to="/portifolio">
+          <Link to="/portifolio" onClick={ () => dispatch(controlSidebar())} >
             Portifólio
           </Link>
         </div>
         <div>
-          <Link to="/contato">
+          <Link to="/contato" onClick={ () => dispatch(controlSidebar())} >
             Contato
           </Link>
         </div>
@@ -27,3 +29,9 @@ export default class NavItens extends Component {
     );
   }
 }
+
+const mapStateToProps = ({clickReducer}) => ({
+  clicked: clickReducer.clicked
+})
+
+export default connect(mapStateToProps)(NavItens)

@@ -1,9 +1,10 @@
 import { Component } from 'react';
-import { FaGripLines, FaTimes, FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa';
-import NavItens from '../components/NavItens';
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa';
 import MyPhoto from '../imagens/my photo.PNG';
 import '../styles/Home.css';
 import Icon from '../components/Icon';
+import Header from '../components/Header';
+
 
 export default class Home extends Component {
   state = {
@@ -21,12 +22,7 @@ export default class Home extends Component {
     const { clicked } = this.state;
     return (
       <>
-        <header>
-          { clicked ?
-            <FaTimes size="30" className="close-nav" onClick={ this.handleClick } /> :
-            (<FaGripLines size="30" className="open-nav" onClick={ this.handleClick } />)}
-          <NavItens state={ clicked }/>
-        </header>
+        <Header clicked={ clicked } handleClick={ this.handleClick} />
         <main className="content-home">
           <div className="data">
             <div className="data-person">
