@@ -5,7 +5,7 @@ img {
 }
 
 @keyframes introducingIMg {
-  0% { opacity: 0; transform: translateY(100px); }
+  0% { opacity: 0; transform: translateY(80px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
@@ -18,10 +18,10 @@ body {
   width: auto;
   height: 100vh;
   animation: introducing;
-  animation-duration: 2s;
+  animation-duration: 4s;
 }
 
 @keyframes introducing {
-  0% { opacity: 0; transform: translateY(-100px);}
-  100% { opacity: 1; transform: translateY(0px);}
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
