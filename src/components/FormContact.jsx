@@ -32,6 +32,7 @@ export default class FormContact extends Component {
           <input type="email" placeholder='exemple@email.com' value={ email } name='email'onChange={ this.handleChanges }/>
           <input type="number" placeholder='digite seu número' value={ number } name='number'onChange={ this.handleChanges }/>
           <label htmlFor="checked"><input type="checkbox" checked={ agreed } name='agreed' id="checked" onChange={ this.handleChanges }/>O número informado é WhatsApp</label>
+          <textarea name="message" cols="30" rows="10" placeholder='Deixe a sua mensagem'/>
           <button type="submit">Solicitar contato</button>
         </form>
       </div>

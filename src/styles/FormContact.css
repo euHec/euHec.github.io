@@ -51,6 +51,15 @@
     border: none;
   }
   
+  form > textarea {
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+  }
+
   form > button {
     width: 50%;
     height: 30px;
