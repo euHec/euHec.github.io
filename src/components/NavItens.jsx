@@ -10,7 +10,7 @@ class NavItens extends Component {
     return (
       <nav className={ clicked ? "closebar" : "sidebar"}>
         <div>
-          <Link to="/meu-portifolio" onClick={ () => dispatch(controlSidebar())} >
+          <Link to="/" onClick={ () => dispatch(controlSidebar())} >
             Home
           </Link>
           <Link to="/bio" onClick={ () => dispatch(controlSidebar())} >
