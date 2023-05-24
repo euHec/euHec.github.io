@@ -1,14 +1,11 @@
-import { Component } from 'react';
 import Header from '../components/Header';
 import FormContact from '../components/FormContact';
 
-export default class Contato extends Component {
-  render() {
+export default function Contato() {
     return (
       <>
         <Header />
         <FormContact />
       </>
     );
-  }
 }
