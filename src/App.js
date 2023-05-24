@@ -12,7 +12,7 @@ function App() {
       <Route exact element={ <Bio /> } path="/bio" />
       <Route exact element={ <Contato /> } path="/contato" />
       <Route exact element={ <Portifolio /> } path="/portifolio" />
-  </Switch>
+    </Switch>
   );
 }
 
