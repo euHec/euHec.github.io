@@ -1,26 +1,19 @@
-import { Component } from 'react';
+import { useContext } from 'react';
 import NavItens from '../components/NavItens';
 import { FaGripLines, FaTimes } from 'react-icons/fa';
-import { connect } from 'react-redux';
-import { controlSidebar } from '../redux/actions';
 import '../styles/NavItens.css';
+import { Context } from '../context/Context.js';
 
-class Header extends Component {
-  render() {
-    const { clicked, dispatch } = this.props;
-    return (
-      <header>
-      { clicked ?
-        <FaTimes size="30" className="close-nav" onClick={ () => dispatch(controlSidebar(!clicked)) } /> :
-        (<FaGripLines size="30" className="open-nav" onClick={ () => dispatch(controlSidebar(!clicked)) } />)}
-      <NavItens state={ clicked }/>
+export default function Header() {
+  const { click, setClick } = useContext(Context)
+  return (
+    <header>
+      {
+        click ?
+          <FaTimes size="30" className="close-nav" onClick={ () => setClick(!click) } /> :
+          (<FaGripLines size="30" className="open-nav" onClick={ () => setClick(!click) } />)
+      }
+      <NavItens state={ click }/>
     </header>
-    );
-  }
+  );
 }
-
-const mapStateToProps = ({clickReducer}) => ({
-  clicked: clickReducer.clicked
-})
-
-export default connect(mapStateToProps)(Header)
