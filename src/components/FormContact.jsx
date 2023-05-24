@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/FormContact.css'
 import formImg from '../imagens/form.svg'
@@ -11,7 +11,9 @@ export default function FormContact() {
     message: '',
     agreed: false,
   }
-  const [data, setData] = useState(stateInitial)
+
+  const [data, setData] = useState(stateInitial);
+  const [disabled, setDisabled] = useState(true);
 
   const handleChanges = ({ target }) => {
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -32,6 +34,12 @@ export default function FormContact() {
     }
   }
 
+  useEffect(() => {
+    if(data.name !== '' && data.number !== '' && data.email !== '' && data.message !== '' ) {
+      setDisabled(false)
+    } else setDisabled(true)
+  }, [data.agreed, data.email, data.message, data.name, data.number])
+
   return (
     <div className="area-form">
       <div>
@@ -44,7 +52,7 @@ export default function FormContact() {
         <input type="number" placeholder='digite seu número' value={ data.number } name='number'onChange={ handleChanges }/>
         <label htmlFor="checked"><input type="checkbox" checked={ data.agreed } name='agreed' id="checked" onChange={ handleChanges }/>O número informado é WhatsApp</label>
         <textarea name="message" cols="30" rows="10" placeholder='Deixe a sua mensagem' value={ data.message } onChange={ handleChanges }/>
-        <button type="submit">Solicitar contato</button>
+        <button type="submit" disabled={ disabled } >Solicitar contato</button>
       </form>
     </div>
   );
