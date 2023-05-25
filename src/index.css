@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 @layer components {
-  body {
-    @apply bg-white
+  .ligth {
+    @apply bg-white transition-colors w-full h-full
+  }
+  .dark {
+    @apply bg-slate-900 text-white transition-colors w-full h-full
   }
 }

@@ -1,12 +1,11 @@
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGripLines, FaTimes } from 'react-icons/fa';
 import { Context } from '../context/Context.js';
-import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa';
-import Icon from '../components/Icon';
 
 export default function Header() {
-  const { click, setClick } = useContext(Context)
+  const { click, setClick, theme, setTheme } = useContext(Context);
   return (
     <header className="w-full h-14 flex items-center">
       {
@@ -14,7 +13,7 @@ export default function Header() {
           <FaTimes size="30" className="sm:hidden" onClick={ () => setClick(!click) } /> :
           (<FaGripLines size="30" className="sm:hidden" onClick={ () => setClick(!click) } />)
       }
-      <nav className="w-4/5 flex justify-around">
+      <nav className="w-5/6 flex justify-around">
         <Link to="/" onClick={ () => setClick(!click)} >
           Home
         </Link>
@@ -24,31 +23,21 @@ export default function Header() {
         <Link to="/portifolio" onClick={ () => setClick(!click)} >
           Portifólio
         </Link>
-        <Link className='bg-black py-1 px-5 rounded-3xl text-white hover:bg-white hover:text-black ' to="/contato" onClick={ () => setClick(!click)} >
+        <Link
+          className={`ease-in-out duration-500 py-1 px-5 rounded-3xl
+          ${theme === 'ligth' ? 'bg-black hover:bg-white text-white hover:text-black' : 'bg-white hover:bg-black text-black hover:text-white' }`}
+          to="/contato"
+          onClick={ () => setClick(!click)}
+        >
           Contato
         </Link>
       </nav>
-      <div className="w-1/5 flex justify-center border-l-2 border-black gap-3">
-        <Icon
-          link="https://www.instagram.com/_euhec/"
-          label="instagram"
-          icon={ <FaInstagram size="30px" /> }
-        />
-        <Icon
-          link="https://www.linkedin.com/in/hectorsouza/"
-          label="instagram"
-          icon={ <FaLinkedin size="30px" /> }
-        />
-        <Icon
-          link="https://wa.me/5575991821105/"
-          label="WhatsApp"
-          icon={ <FaWhatsapp size="30px" /> }
-        />
-        <Icon
-          link="https://github.com/euHec"
-          label="Github"
-          icon={ <FaGithub size="30px" /> }
-        />
+      <div className="w-1/6 flex justify-center border-l-2 border-black gap-3">
+        {
+          theme === 'ligth'
+          ? <MdDarkMode size="30px" onClick={ () => setTheme('dark')} />
+          : <MdOutlineLightMode size="30px" onClick={ () => setTheme('ligth')} />
+        }
       </div>
     </header>
   );
