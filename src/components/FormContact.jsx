@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import '../styles/FormContact.css'
 import formImg from '../imagens/form.svg'
 
 export default function FormContact() {
