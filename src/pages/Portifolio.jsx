@@ -1,5 +1,5 @@
-import CardProjects from '../components/CardProjects';
 import Header from '../components/Header';
+import CardProjects from '../components/CardProjects';
 import projectsData from '../projetos/projectsData';
 
 export default function Portifolio() {
@@ -7,10 +7,10 @@ export default function Portifolio() {
     <>
       <Header />
       <main>
-        <h1>Portifolio</h1>
         {
-          projectsData.forEach((projects) => {
+          projectsData.map((projects, index) =>
             <CardProjects
+              key={ index }
               name = { projects.name }
               repository = { projects.repository }
               deploy = { projects.deploy }
@@ -18,7 +18,7 @@ export default function Portifolio() {
               description = { projects.description }
               technologies = { projects.technologies }
             />
-          })
+          )
         }
       </main>
     </>
