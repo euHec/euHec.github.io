@@ -32,7 +32,7 @@ export default function Header() {
           Contato
         </Link>
       </nav>
-      <div className="w-1/6 flex justify-center border-l-2 border-black gap-3">
+      <div className={`w-1/6 flex justify-center border-l-2 ${ theme === 'ligth' ? 'border-black' : 'border-white'} gap-3`}>
         {
           theme === 'ligth'
           ? <MdDarkMode size="30px" onClick={ () => setTheme('dark')} />
