@@ -1,16 +1,43 @@
-export default function CardProjects({name, repository, deploy, thumbnails, description, technologies}) {
+import { FaGithub } from 'react-icons/fa';
+import { TbWorldWww } from 'react-icons/tb';
+import Icon from './Icon';
+import { useContext } from 'react';
+import { Context } from '../context/Context';
+
+
+export default function CardProjects({id, name, repository, deploy, thumbnails, description, technologies}) {
+  const { theme } = useContext(Context);
   return (
-    <>
-      <picture>
-        <img src={thumbnails} alt={`projeto ${name}`} />
-        <h1>{ name }</h1>
-        <a href={ deploy } >Deploy</a>
-        <a href={ repository } >Github</a>
-        <p>{ description }</p>
+    <picture className={`w-2/6 h-120 text-center border
+    ${theme === 'ligth' ? 'bg-black hover: text-white' : 'bg-white hover: text-black' }
+    border-slate-950 bg-black rounded-xl`}>
+      <img className="w-full max-h-60 rounded-xl" src={ thumbnails }  alt={`projeto ${name}`} />
+      <h1 className="">{ name }</h1>
+      <p className="text-xs text-justify p-4">{ description }</p>
+      <div className='flex justify-center gap-2 flex-wrap py-4'>
         {
-          technologies.map((tech) => <p>{ tech }</p>)
+          technologies.map((tech) => <p className={`p-1 text-xs lowercase rounded-lg
+          ${theme === 'ligth' ? 'bg-white text-black' : 'bg-black text-white'}`}
+          >
+            { tech }
+          </p>)
         }
-      </picture>
-    </>
+      </div>
+      <div className="flex gap-4 justify-center py-4">
+        {
+          id !== 2 && (
+          <Icon
+            link={ repository }
+            label="Deploy"
+            icon={ <FaGithub size="20px" /> }
+          />)
+        }
+        <Icon
+          link={ deploy }
+          label="Github"
+          icon={ <TbWorldWww size="20px" /> }
+        />
+      </div>
+    </picture>
   );
 }

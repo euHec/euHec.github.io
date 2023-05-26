@@ -4,9 +4,9 @@
 
 @layer components {
   .ligth {
-    @apply bg-white transition-colors w-full h-full
+    @apply bg-white transition-colors w-screen h-screen
   }
   .dark {
-    @apply bg-slate-900 text-white transition-colors w-full h-full
+    @apply bg-slate-900 text-white transition-colors w-screen h-screen
   }
 }

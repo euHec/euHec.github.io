@@ -3,12 +3,13 @@ import projectsData from '../projetos/projectsData';
 
 export default function Portifolio() {
   return (
-    <>
-      <main>
+    <main className="w-11/12 h-full m-auto">
+      <div className='h-1/2 flex flex-wrap gap-5 justify-center'>
         {
-          projectsData.map((projects, index) =>
+          projectsData.map((projects) =>
             <CardProjects
-              key={ index }
+              key={ projects.id }
+              id={ projects.id }
               name = { projects.name }
               repository = { projects.repository }
               deploy = { projects.deploy }
@@ -18,7 +19,7 @@ export default function Portifolio() {
             />
           )
         }
-      </main>
-    </>
+      </div>
+    </main>
   );
 }
