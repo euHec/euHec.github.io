@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.cae8ecd0.css",
-    "main.js": "/static/js/main.73732717.js",
-    "static/media/my photo.PNG": "/static/media/my photo.bd9821d5b26901a96440.PNG",
+    "main.css": "/static/css/main.3c551409.css",
+    "main.js": "/static/js/main.b7c96440.js",
+    "static/media/eu.jpeg": "/static/media/eu.aae1093b805c20d25d95.jpeg",
+    "static/media/my photo.PNG": "/static/media/my photo.574a57ffed96de204e0e.PNG",
+    "static/media/tunes.png": "/static/media/tunes.154542bacd55c53b1b30.png",
+    "static/media/esperancar.png": "/static/media/esperancar.6ddfefb9115db77913de.png",
+    "static/media/app.png": "/static/media/app.c0c8e7ea88cd44c3be1b.png",
+    "static/media/wallet.png": "/static/media/wallet.5b5c935443ee8e5ba00b.png",
+    "static/media/study.svg": "/static/media/study.17d88fadf724705187a7b31037cda098.svg",
     "static/media/form.svg": "/static/media/form.f415b22188b547f95bad1029195e82e9.svg",
     "index.html": "/index.html",
-    "main.cae8ecd0.css.map": "/static/css/main.cae8ecd0.css.map",
-    "main.73732717.js.map": "/static/js/main.73732717.js.map"
+    "main.3c551409.css.map": "/static/css/main.3c551409.css.map",
+    "main.b7c96440.js.map": "/static/js/main.b7c96440.js.map"
   },
   "entrypoints": [
-    "static/css/main.cae8ecd0.css",
-    "static/js/main.73732717.js"
+    "static/css/main.3c551409.css",
+    "static/js/main.b7c96440.js"
   ]
 }
