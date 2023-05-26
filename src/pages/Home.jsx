@@ -8,7 +8,7 @@ export default function Home() {
   const { theme } = useContext(Context);
 
   return (
-    <main className="w-full h-full px-2">
+    <main className="w-full h-full px-2 pt-20">
       <picture className={`gap-5 p-3 rounded-3xl ${theme === 'ligth' ? 'border-black' : 'border-white' }  border-2 w-full h-4/5 flex items-center justify-center`}>
         <img src={ MyPhoto } alt="Hector Souza" className='w-80 h-full rounded-3xl'/>
         <div>

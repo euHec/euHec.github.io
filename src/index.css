@@ -4,9 +4,24 @@
 
 @layer components {
   .ligth {
-    @apply bg-white transition-colors w-screen h-screen
+    @apply bg-white transition-colors w-screen h-screen overflow-x-hidden
+  }
+  .ligth::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  width: 3px;
   }
   .dark {
-    @apply bg-slate-900 text-white transition-colors w-screen h-screen
+    @apply bg-slate-900 text-white transition-colors w-screen h-screen overflow-x-hidden
+  }
+  .dark::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  width: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
   }
 }
+

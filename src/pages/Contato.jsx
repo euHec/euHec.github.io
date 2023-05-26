@@ -42,7 +42,7 @@ export default function Contato() {
   }, [data.agreed, data.email, data.message, data.name, data.number]);
 
   return (
-    <section className="flex flex-col items-center justify-center gap-10 mt-5">
+    <section className="flex flex-col items-center justify-center gap-10 pt-20">
       <h1 className="text-5xl" >Solicitar contato</h1>
       <div className="w-full flex items-center justify-center">
         <img src={formImg} alt="svg" className='w-1/3'/>

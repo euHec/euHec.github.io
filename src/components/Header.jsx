@@ -7,7 +7,7 @@ import { Context } from '../context/Context.js';
 export default function Header() {
   const { click, setClick, theme, setTheme } = useContext(Context);
   return (
-    <header className="w-full h-14 flex items-center">
+    <header className={`w-full h-14 flex items-center fixed ${theme === 'ligth' ? 'ligth' : 'dark'}`} >
       {
         click ?
           <FaTimes size="30" className="sm:hidden" onClick={ () => setClick(!click) } /> :
@@ -21,7 +21,7 @@ export default function Header() {
           Bio
         </Link>
         <Link to="/portifolio" onClick={ () => setClick(!click)} >
-          Portifólio
+          Projetos
         </Link>
         <Link
           className={`ease-in-out duration-500 py-1 px-5 rounded-3xl
