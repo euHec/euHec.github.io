@@ -3,11 +3,11 @@ import projectsData from '../projetos/projectsData';
 
 export default function Portifolio() {
   return (
-    <section className="w-4/5 grid-cols-2 grid m-auto pt-20 gap-5 justify-center items-center">
+    <main className="w-full lg:w-4/5 lg:grid-cols-2 grid m-auto pt-16 pb-3 lg:pt-20 gap-5 justify-center items-center">
       {
-        projectsData.map((projects) =>
+        projectsData.map((projects, index) =>
           <CardProjects
-            key={ projects.id }
+            key={ index }
             id={ projects.id }
             name = { projects.name }
             repository = { projects.repository }
@@ -18,6 +18,6 @@ export default function Portifolio() {
           />
         )
       }
-    </section>
+    </main>
   );
 }

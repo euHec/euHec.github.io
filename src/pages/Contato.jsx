@@ -45,7 +45,7 @@ export default function Contato() {
     <section className="flex flex-col items-center justify-center gap-10 pt-20">
       <h1 className="text-5xl" >Solicitar contato</h1>
       <div className="w-full flex items-center justify-center">
-        <img src={formImg} alt="svg" className='w-1/3'/>
+        <img src={formImg} alt="svg" className='hidden lg:block w-1/3'/>
         <form onSubmit={ handleSubmit } className="flex flex-col gap-2 text-black">
           <input
             type="text"

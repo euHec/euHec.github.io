@@ -8,15 +8,18 @@ import { Context } from '../context/Context';
 export default function CardProjects({id, name, repository, deploy, thumbnails, description, technologies}) {
   const { theme } = useContext(Context);
   return (
-      <picture className={`w-4/6 h-120 text-center border  border-slate-950 bg-black rounded-xl m-auto
+      <picture className={`w-5/6 lg:w-4/6 h-120 text-center border  border-slate-950 bg-black rounded-xl m-auto
       ${theme === 'ligth' ? 'bg-black hover: text-white' : 'bg-white hover: text-black' }`}>
         <img className="w-full max-h-60 rounded-xl" src={ thumbnails }  alt={`projeto ${name}`} />
         <h1 className="">{ name }</h1>
         <p className="text-xs text-justify p-4">{ description }</p>
         <div className='flex justify-center gap-2 flex-wrap py-4'>
           {
-            technologies.map((tech) => <p className={`p-1 text-xs lowercase rounded-lg
-            ${theme === 'ligth' ? 'bg-white text-black' : 'bg-black text-white'}`}
+            technologies.map((tech, index) =>
+            <p
+              key={ index } 
+              className={`p-1 text-xs lowercase rounded-lg
+              ${theme === 'ligth' ? 'bg-white text-black' : 'bg-black text-white'}`}
             >
               { tech }
             </p>)

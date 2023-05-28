@@ -8,13 +8,20 @@ export default function Home() {
   const { theme } = useContext(Context);
 
   return (
-    <main className="w-full h-full px-2 pt-20">
-      <picture className={`gap-5 p-3 rounded-3xl ${theme === 'ligth' ? 'border-black' : 'border-white' }  border-2 w-full h-4/5 flex items-center justify-center`}>
-        <img src={ MyPhoto } alt="Hector Souza" className='w-80 h-full rounded-3xl'/>
-        <div>
-          <h1 className="text-6xl">Hector Souza</h1>
+    <main className="w-screen h-screen pt-16 md:pt-20 px-5">
+      <div
+        className={
+          `${theme === 'ligth' ? 'border-black' : 'border-white' }
+          p-5 border-2 rounded-3xl flex flex-col items-center lg:flex-row lg:w-full lg:h-5/6 m-auto`
+        }
+      >
+        <div className='w-full h-full mx-auto'>
+          <img src={ MyPhoto } alt="Hector Souza" className='w-auto h-full m-auto rounded-3xl '/>
+        </div>
+        <div className='w-full h-full mx-auto flex flex-col justify-center text-center gap-2 lg:text-left lg:gap-5'>
+          <h1 className="text-4xl sm:text-6xl">Hector Souza</h1>
           <h2 className="text-2xl">Front-end Developer</h2>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center lg:justify-start">
             <Icon
             link="https://www.instagram.com/_euhec/"
             label="instagram"
@@ -38,7 +45,7 @@ export default function Home() {
           </div>
           <h3 className="text-sm">@_euHec</h3>
         </div>
-      </picture>
+      </div>
     </main>
   );
 }
