@@ -35,8 +35,8 @@ export default function Header() {
         <div className={`w-1/6 flex justify-center lg:border-l-2 ${ theme === 'ligth' ? 'border-black' : 'border-white'} gap-3`}>
           {
             theme === 'ligth'
-            ? <MdDarkMode size="30px" onClick={ () => setTheme('dark')} />
-            : <MdOutlineLightMode size="30px" onClick={ () => setTheme('ligth')} />
+            ? <MdDarkMode size='30px' className='cursor-pointer' onClick={ () => setTheme('dark')}/>
+            : <MdOutlineLightMode size='30px' className='cursor-pointer' onClick={ () => setTheme('ligth')} />
           }
         </div>
       </header>
@@ -58,7 +58,7 @@ export default function Header() {
               Projetos
             </Link>
             <Link
-              className={`ease-in-out duration-500 py-1 px-5 rounded-3xl
+              className={`ease-in-out duration-500 py-1 px-5 rounded-3xl cursor-pointer
               ${theme === 'ligth'
               ? 'bg-white hover:bg-black text-black hover:text-white' 
               : 'bg-black hover:bg-white text-white hover:text-black'
