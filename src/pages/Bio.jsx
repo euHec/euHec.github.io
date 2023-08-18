@@ -18,25 +18,25 @@ export default function Bio () {
             <a href="https://www.linkedin.com/in/hectorsouza/" target="_blank" rel="noreferrer" className="text-xs hover:text-slate-500">clique para saber mais sobre carreira...</a>
           </div>
         </div>
-        <img src={ eu } alt="formação" className="w-3/6 lg:w-2/6 rounded-full order-1"/>
+        <img src={ eu } alt="formação" className="w-3/6 lg:w-1/4 rounded-full order-1"/>
       </div>
-      <div className="w-full items-center justify-center flex">
-        <img src={ study } alt="formação" className="hidden lg:block w-2/6"/>
+      <div className="w-full text-center items-center justify-center flex">
         <div className="w-full flex justify-center flex-col lg:w-2/6">
           <h1 className="text-4xl lg:text-2xl text-center py-3">Formação</h1>
-          <div className="w-full py-3 text-center lg:text-left">
+          <div className="w-full flex flex-col items-center py-3 text-center lg:text-left">
             <h2 className={`m-auto lg:m-0 p-1 ${theme === 'ligth' ? 'bg-black text-white' : 'bg-white text-black' } text-center rounded-xl w-44`}>Nov/2022 - Nov/2023</h2>
-            <h3>Desenvolvimento Web Full Stack - <strong><a href="betrybe.com" target="_blank">Trybe</a></strong></h3>
+            <h3 className='text-center'>Desenvolvimento Web Full Stack - <strong><a href="betrybe.com" target="_blank">Trybe</a></strong></h3>
           </div>
-          <div className="w-full py-3 text-center lg:text-left">
+          <div className="w-full flex flex-col items-center py-3 text-center lg:text-left">
             <h2 className={`m-auto lg:m-0 p-1 ${theme === 'ligth' ? 'bg-black text-white' : 'bg-white text-black' } text-center rounded-xl w-44`}>Jun/2019 - Em pausa</h2>
-            <h3>Sistemas de informação - UNIFTC</h3>
+            <h3 className='text-center'>Sistemas de informação - UNIFTC</h3>
           </div>
-          <div className="w-full py-3 text-center lg:text-left">
+          <div className="w-full flex flex-col items-center py-3 text-center lg:text-left">
             <h2 className={`m-auto lg:m-0 p-1 ${theme === 'ligth' ? 'bg-black text-white' : 'bg-white text-black' } text-center rounded-xl w-44`}>Jun/2016 - Jun/2018</h2>
-            <h3>Técnico em Mecânica, SENAI</h3>
+            <h3 className='text-center'>Técnico em Mecânica, SENAI</h3>
           </div>
         </div>
+        <img src={ study } alt="formação" className="hidden lg:block w-2/6"/>
       </div>
     </section>
   );
